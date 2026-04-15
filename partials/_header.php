@@ -1,6 +1,7 @@
-
 <?php
-session_start();
+if(session_status() == PHP_SESSION_NONE){
+    session_start();
+}
 
 echo '<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
@@ -71,9 +72,4 @@ if (isset($_GET['signupsuccess']) && $_GET['signupsuccess'] == "true") {
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>';
 }
-
-
-
-
-
 ?>
